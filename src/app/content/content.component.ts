@@ -24,6 +24,6 @@ export class ContentComponent implements OnInit, DoCheck {
   ngDoCheck() {
     this.currentTemp = this.app.infos['dataseries'][0]['temp2m'];
     this.pressure = this.app.infos['dataseries'][0]['msl_pressure'];
-    this.currentHum = this.app.infos['dataseries'][0]['rh2m'];
+    this.currentHum = 20 + 5 * this.app.infos['dataseries'][0]['rh2m'];
   }
 }
